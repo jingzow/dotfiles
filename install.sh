@@ -6,6 +6,10 @@ pushd $(dirname ${BASH_SOURCE[0]}) > /dev/null
 SCRIPT_DIR=$(pwd)
 popd > /dev/null
 
+# cleanup current dotfiles
+rm ~/.gitconfig
+rm -r ~/.config
+
 # link
-ln -sf $SCRIPT_DIR/.gitconfig ~/.gitconfig
-ln -sf $SCRIPT_DIR ~/.config
+ln -s $SCRIPT_DIR/.gitconfig ~/.gitconfig
+ln -s $SCRIPT_DIR ~/.config
