@@ -6,5 +6,6 @@ pushd $(dirname ${BASH_SOURCE[0]}) > /dev/null
 SCRIPT_DIR=$(pwd)
 popd > /dev/null
 
-# install neovim
-ln -s $SCRIPT_DIR ~/.config
+# link
+ln -sf $SCRIPT_DIR/.gitconfig ~/.gitconfig
+ln -sf $SCRIPT_DIR ~/.config
